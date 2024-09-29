@@ -39,7 +39,7 @@ class Medicine {
     }
 }
 
-public class solution {
+public class program1 {
     public static int[] medicinePriceForGivenDisease(String dis_name, Medicine[] med) {
         List<Integer> res = new ArrayList<Integer>();
 
