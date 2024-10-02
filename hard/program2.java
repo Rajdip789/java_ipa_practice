@@ -55,7 +55,7 @@ public class program2 {
 
     public static TravelAgencies agencyDetailsforGivenIdAndType(TravelAgencies[] TA, int regNo, String packageType) {
         for(TravelAgencies ta : TA) {
-            if(ta.getFlightFacility() == true && ta.getRegNo() == regNo && ta.getPackageType().equals(packageType))
+            if(ta.getFlightFacility() == true && ta.getRegNo() == regNo && ta.getPackageType().equalsIgnoreCase(packageType))
                 return ta;
         }
 
