@@ -63,6 +63,12 @@ class collections {
     static void listAndStream() {
         /* List and Stream */
 
+        /**
+         * CollectionS.srot() and list_name.sort() for only use with java Collections
+         * Arrays.sort() for sorting arrays of primitive data types and objects not collections.
+         * sorted() works on stream, it returns a stream, we need to covert back into arrays for using it.
+        **/
+
         List<Integer> list = List.of(4, 4, 2, 1, 5, 4, 10, 9, 17);
         List<Integer> newList = list.stream().map(i -> i * i).collect(Collectors.toList());
         newList.forEach(i -> System.out.println(i));

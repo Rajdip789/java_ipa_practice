@@ -60,42 +60,40 @@ public class program4 {
     }
 
     public static Hotel searchHotelByWifiOption(Hotel[] ht, String inputWifiOption) {
-        // Hotel[] filteredHotels = Arrays.stream(ht).filter(h -> h.getWifiFacility().equalsIgnoreCase(inputWifiOption)).sorted(new Comparator<Hotel>() {
-        //     public int compare(Hotel o1, Hotel o2) { return Double.compare(o2.getTotalBill(), o1.getTotalBill()); };
-        // }).toArray(Hotel[]::new);
+        Hotel[] filteredHotels = Arrays.stream(ht).filter(h -> h.getWifiFacility().equalsIgnoreCase(inputWifiOption)).sorted((o1, o2) -> Double.compare(o2.getTotalBill(), o1.getTotalBill())).toArray(Hotel[]::new);
 
-        // if(filteredHotels.length < 1) return null;
-        // if(filteredHotels.length == 1) return filteredHotels[0];
-        // return filteredHotels[1];
+        if(filteredHotels.length < 1) return null;
+        if(filteredHotels.length == 1) return filteredHotels[0];
+        return filteredHotels[1];
 
-        List<Hotel> res = new ArrayList<Hotel>();
+        // List<Hotel> res = new ArrayList<Hotel>();
 
-        for(Hotel h : ht) {
-            if(h.getWifiFacility().equalsIgnoreCase(inputWifiOption)) {
-                res.add(h);
-            }
-        }
+        // for(Hotel h : ht) {
+        //     if(h.getWifiFacility().equalsIgnoreCase(inputWifiOption)) {
+        //         res.add(h);
+        //     }
+        // }
 
-        double highest = Double.NEGATIVE_INFINITY;
-        double secondHighest = Double.NEGATIVE_INFINITY;
-        Hotel secondHighestBillHotel = null;
-        Hotel highestBillHotel = null;
+        // double highest = Double.NEGATIVE_INFINITY;
+        // double secondHighest = Double.NEGATIVE_INFINITY;
+        // Hotel secondHighestBillHotel = null;
+        // Hotel highestBillHotel = null;
 
-        for(Hotel h : ht) {
-            double totalBill = h.getTotalBill();
+        // for(Hotel h : ht) {
+        //     double totalBill = h.getTotalBill();
 
-            if(totalBill > highest) {
-                secondHighest = highest;
-                highest = totalBill;
-                secondHighestBillHotel = highestBillHotel;
-                highestBillHotel = h;
-            } else if(totalBill > secondHighest && totalBill < highest) {
-                secondHighest = totalBill;
-                secondHighestBillHotel = h;
-            }
-        }
+        //     if(totalBill > highest) {
+        //         secondHighest = highest;
+        //         highest = totalBill;
+        //         secondHighestBillHotel = highestBillHotel;
+        //         highestBillHotel = h;
+        //     } else if(totalBill > secondHighest && totalBill < highest) {
+        //         secondHighest = totalBill;
+        //         secondHighestBillHotel = h;
+        //     }
+        // }
 
-        return secondHighestBillHotel;
+        // return secondHighestBillHotel;
     }
 
     public static void main(String[] args) {

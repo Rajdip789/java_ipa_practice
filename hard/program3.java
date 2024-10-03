@@ -61,6 +61,7 @@ public class program3 {
             }
         }
 
+        //We can also write a lamda function insted
         res.sort(new Comparator<Laptop> () {
             @Override
             public int compare(Laptop l1, Laptop l2) {
