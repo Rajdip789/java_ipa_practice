@@ -18,6 +18,19 @@ public class collections {
          * -- Collection - part of java Collection framework, its an interface.
          * -- Collections - is a Utility class and provide static methods, which are
          *    used to operate on collections. like sorting, swappping, searching, reverse, copy etc.
+         * 
+         * -- CONVERT COLLECTION TO ARRAY --
+         *  1. collection_name.toArray() --> return an array of obejct type
+         *  2. collection_name.toArray(new T[0]) --> return an array of specified(T) type
+         *  3. collection_name.stream().filter().toArray(size -> new Integer[size])
+         *     collection_name.stream().filter().toArray(Integer[]::new)
+         *          - This approach (Integer[]::new) does the same thing. 
+         *          Integer[]::new is a method reference that refers to the array constructor 
+         *          new Integer[size] and works similarly to the lambda syntax used in th previous.
+         * 
+         * -- CONVERT LIST TO ARRAY --
+         *  1. Arrays.asList(array) --> Fixed size list
+         *  2. Arrays.stream(array).collect(Collectors.toList()) --> Resizable list
          **/
 
         /* ---- List and different methods---- */
