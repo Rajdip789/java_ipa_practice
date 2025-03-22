@@ -1,3 +1,5 @@
+import java.util.Optional;
+
 public class optional {
     public static void main(String[] args) {
         String[] words = new String[10];
