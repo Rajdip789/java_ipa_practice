@@ -148,8 +148,7 @@ public class program8 {
     }
 }
 
-/**
- 
+/** 
 --- input ---
 boAt BassHeads
 boAt
@@ -174,4 +173,4 @@ boAt
 Buds 2 Neo
 500
 
- * /
+**/
