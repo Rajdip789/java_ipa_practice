@@ -36,6 +36,10 @@ public class collections {
         /* ---- List and different methods---- */
         
         // 1. ArrayList (Standard - Mutable list)
+        // Default capacity of ArrayList is 10, capacity grows dynamically upon filling
+        // formula -> NewCapacity = OldCapacity + (OldCapacity >> 1) 
+        // ex -> 10 -> 15 -> 22 -> 33
+        
         List<Integer> values = new ArrayList<>();
         values.add(1);
         values.add(20);
